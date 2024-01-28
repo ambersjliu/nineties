@@ -15,7 +15,6 @@ const config = {
 			// Return a response object with status 200 to ignore the error and continue building
 			return {
 			  status: 200,
-			  html: '<!-- Error occurred during prerendering, but continuing with the build -->',
 			};
 		  },
 		},
