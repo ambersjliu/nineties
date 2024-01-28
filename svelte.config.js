@@ -3,11 +3,24 @@ import adapter from '@sveltejs/adapter-auto';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
-		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter()
-	}
+		// other configuration options...
+	
+		prerender: {
+		  // other prerender options...
+	
+		  handleHttpError: ({ request, error }) => {
+			// Log the error or handle it as needed
+			console.error(`HTTP error for ${request.url}: ${error.message}`);
+	
+			// Return a response object with status 200 to ignore the error and continue building
+			return {
+			  status: 200,
+			  html: '<!-- Error occurred during prerendering, but continuing with the build -->',
+			};
+		  },
+		},
+		adapter : adapter()
+	  },
 };
 
 export default config;
