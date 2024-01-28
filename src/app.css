@@ -105,6 +105,7 @@ body{
 	width: 100%;
 	gap: 20px;
 	padding: 10px;
+	align-items: center;
 }
 
 .item-image{
@@ -124,6 +125,21 @@ body{
 	box-shadow: 7px 5px 5px rgb(0 0 0 / 20%);
 }
 
+/*Misc*/
+footer{
+	display: flex;
+	justify-content: center;
+}
+
+.small-button{
+	height: 3em;
+}
+
+
+#dj, #clown{
+	display: none;
+}
+
 @media screen and (min-width: 768px){
 	:root{
 		font-size: 16px;
@@ -140,6 +156,23 @@ body{
 
 	.item-image{
 		width: 40%;
+	}
+	
+	#dj{
+		position: absolute;
+		left: 10vw;
+		z-index: 2;
+		display: block;
+		height: 9rem;
+	}
+	
+	#clown{
+		position: absolute;
+		right: 10vw;
+		z-index: 2;
+		display: block;
+		height: 9rem;
+
 	}
 	
 }
