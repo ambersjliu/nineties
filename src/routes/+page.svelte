@@ -22,9 +22,12 @@
 	import dialup from "$lib/images/dialup.gif"
 	import ie from "$lib/images/ie.jpg"
 	import netscape from "$lib/images/netscape.jpg"
+	import favicon from "$lib/images/favicon.png"
 
 	import "../app.css"
 </script>
+
+<link rel="favicon" href={favicon}>
 
 <img id="dj" src={dj} alt="A DJ">
 <img id="clown" src={clown} alt="A clown">
