@@ -2,5 +2,5 @@
 	import cope from "$lib/images/cope.jpg"
 </script>
 
-<div>your mom</div>
+<div>testing</div>
 <img src={cope}>
